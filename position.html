@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Positioning</title>
+  <style>
+    body { margin: 0; padding: 20px; font-family: Arial; min-height: 2000px; }
+
+    /* static */
+    .box-static {
+      width: 100px; height: 100px;
+      background: #a8d4e6;
+      display: inline-block;
+    }
+
+    /* relative */
+    .box-relative-1 {
+      position: relative; top: 20px; left: 10px;
+      width: 120px; height: 120px;
+      background: #a0e8a0;
+    }
+    .box-relative-2 {
+      position: relative; top: 60px; left: 40px;
+      width: 150px; height: 150px;
+      background: #f7c5d5;
+    }
+
+    /* container для absolute */
+    .container {
+      position: relative;
+      width: 500px; height: 400px;
+      background: #d3d3d3;
+      margin-top: 60px;
+    }
+    .box-absolute-1 {
+      position: absolute; top: 20px; left: 20px;
+      width: 160px; height: 160px;
+      background: #ff8c4b;
+    }
+    .box-absolute-2 {
+      position: absolute; top: 100px; left: 80px;
+      width: 160px; height: 160px;
+      background: #7ec8e3;
+    }
+    .box-absolute-3 {
+      position: absolute; top: 180px; left: 160px;
+      width: 160px; height: 160px;
+      background: #800080; color: #fff;
+    }
+
+    /* z-index */
+    .box-zindex-1 {
+      position: relative; z-index: 5;
+      width: 200px; height: 200px;
+      background: #e57373;
+    }
+    .box-zindex-2 {
+      position: relative; z-index: 4; top: -80px; left: 60px;
+      width: 200px; height: 200px;
+      background: #20b2aa;
+    }
+
+    /* fixed */
+    .box-fixed-1 {
+      position: fixed; top: 10px; right: 10px;
+      width: 150px; height: 70px;
+      background: #fff200;
+    }
+    .box-fixed-2 {
+      position: fixed; bottom: 10px; left: 10px;
+      width: 150px; height: 70px;
+      background: #ffb300;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box-static">Static</div>
+  <div class="box-static">Static</div>
+
+  <div class="box-relative-1">Relative 1</div>
+  <div class="box-relative-2">Relative 2</div>
+
+  <div class="container">
+    <div class="box-absolute-1">Absolute 1</div>
+    <div class="box-absolute-2">Absolute 2</div>
+    <div class="box-absolute-3">Absolute 3</div>
+  </div>
+
+  <div class="box-zindex-1">Z-Index 5</div>
+  <div class="box-zindex-2">Z-Index 4</div>
+
+  <div class="box-fixed-1">Fixed Top-Right</div>
+  <div class="box-fixed-2">Fixed Bottom-Left</div>
+
+</body>
+</html>
